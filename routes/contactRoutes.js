@@ -11,7 +11,7 @@ router.route("/").post(createContact);
 
 //get the indivisual  contact 
 
-router.route("/:id").get(createContact);
+router.route("/:id").get(getContact);
 
 //put the induvisual contact
 router.route("/:id").put(updateContact);
