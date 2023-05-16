@@ -11,6 +11,14 @@ const getContacts =(req ,res)=>{
 //@access public
 const createContact = (req, res) => {
     console.log("contact is comming",req.body);
+//error handling if field is empty then handle the error
+const {name, email, phone} = req.body;
+if (!name || !email || !phone) {
+    res.status(400);
+    throw new Error ('all fields should mandatory ')
+}
+
+
     res.status(201).json({message:'create  contacts'});
 }
 
