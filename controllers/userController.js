@@ -74,7 +74,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@access pravite
 const currentUser = asyncHandler(async(req ,res) => {
     // const contacts= await Contact.find();
-     res.json({message :"current user"});
+     res.json(req.user);
  }); 
 
 
